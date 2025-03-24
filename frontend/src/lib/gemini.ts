@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { configDotenv } from 'dotenv';
 
-const genAI = new GoogleGenerativeAI('AIzaSyAgRdhRht2XFaH-rHJ5qTCM_C061X34v6w');
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export interface Campaign {
   id: string;
